@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'New Tegomin', serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    background: linear-gradient(rgb(129, 229, 129), rgb(243, 233, 233));
+    width: 95vh;
+    height: 95vh;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+    background: linear-gradient(rgb(89, 40, 130), rgb(38, 26, 129));
+    border-radius: 10px;
+}
+
+.snakebody {
+    background: linear-gradient(rgb(109, 66, 145), rgb(168, 70, 122));
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.food {
+    background: linear-gradient(rgb(70, 145, 80), rgb(20, 134, 20));
+    border-radius: 10px;
+}
+
+.score-div {
+    position: absolute;
+    top: 40px;
+    right: 5vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.left-arrow-div {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-arrow-div img {
+    background-color: blue;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px black;
+    margin: 5px;
+}
+
+.right-arrow-div {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-arrow-div img {
+    margin: 5px;
+    background-color: blue;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 3px black;
+}
+
+/* for upto 945px screen */
+@media screen and (max-width: 1200px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .board {
+        margin-top: 100px;
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .score-div {
+        position: absolute;
+        top: 0px;
+        right: 40%;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .left-arrow-div img {
+        width: 70px;
+    }
+
+    .right-arrow-div img {
+        width: 70px;
+    }
+
+}
+
+/* for upto 700px screen */
+@media screen and (max-width: 951px) {
+
+    .board {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .left-arrow-div {
+        left: 20px;
+    }
+
+    .left-arrow-div img {
+        width: 70px;
+    }
+
+    .right-arrow-div {
+        right: 20px;
+    }
+
+    .right-arrow-div img {
+        width: 70px;
+    }
+
+}
+
+
+/* for upto 700px screen */
+@media screen and (max-width: 550px) {
+
+    .board {
+        width: 90vw;
+        height: 100vw;
+    }
+
+    .left-arrow-div {
+        left: 10px;
+        bottom: 10px;
+    }
+    
+    .left-arrow-div img {
+        margin: 5px;
+        width: 50px;
+    }
+    
+    .right-arrow-div {
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .right-arrow-div img {
+        margin: 5px;
+        width: 50px;
+    }
+}
